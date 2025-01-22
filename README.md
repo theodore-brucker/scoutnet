@@ -174,7 +174,8 @@ zig build-exe scout.zig -O ReleaseSafe
 sudo vi /etc/systemd/system/scout.service
 ```
 Paste this into the service file
-```[Unit]
+```
+[Unit]
 Description=Scout Service
 After=network.target
 
@@ -189,12 +190,7 @@ StandardOutput=append:/var/log/scout.log
 StandardError=append:/var/log/scout.log
 
 [Install]
-WantedBy=multi-user.target```
-
-
-[Install]
 WantedBy=multi-user.target
-EOF
 ```
 ```
 # Create log file with proper permissions
